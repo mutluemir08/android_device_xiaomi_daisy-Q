@@ -2,17 +2,19 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common Lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common AOSiP stuff
+$(call inherit-product, vendor/aosip/config/common.mk)
 
 # Inherit from aosp_daisy device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 PRODUCT_BRAND := xiaomi
-PRODUCT_DEVICE := aosp_daisy
+PRODUCT_DEVICE := aosip_daisy
 PRODUCT_MANUFACTURER := xiaomi
-PRODUCT_NAME := lineage_aosp_daisy
+PRODUCT_NAME := aosip_daisy
 PRODUCT_MODEL := Mi A2 Lite
+BOARD_VENDOR := Xiaomi
+TARGET_VENDOR := Xiaomi
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 TARGET_VENDOR := xiaomi
